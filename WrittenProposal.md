@@ -6,4 +6,4 @@ To move the marble, a joystick that controls that maze platform will tilt the ma
 The marble will then fall due to gravity until you have successfully completed the maze. 
 
 This project will be done using an arduino uno, 2 servo motor, a joystick module, along with the necessary hardware
-Along with any other parts needed to build the maze. 
+along with any other parts needed to build the maze. 
