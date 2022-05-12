@@ -1,0 +1,27 @@
+This is the code used for controlling the servos and joystick.
+
+#include <Servo.h>
+
+Servo myservo1;  // create servo object to control a servo
+Servo myservo2;
+int potpin1 = A0;  // analog pin used to connect the potentiometer
+int potpin2 = A1;
+int val;    // variable to read the value from the analog pin
+
+void setup() {
+  myservo1.attach(9);
+  myservo2.attach(10);// attaches the servo on pin 9 to the servo object
+}
+
+void loop() {
+  val = analogRead(float(potpin1));            // reads the value of the potentiometer 
+  val = map(val, 0, 1090, 5, 180);     // scale it to use it with the servo 
+  myservo1.write(val);                  // sets the servo position according to the scaled value
+  delay(55); // waits for the servo to get there
+
+  val = analogRead(float(potpin2));            // reads the value of the potentiometer 
+  val = map(val, 0, 1090, 0, 180);     // scale it to use it with the servo 
+  myservo2.write(val);                  // sets the servo position according to the scaled value
+  delay(55);
+
+}
